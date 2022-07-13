@@ -1,0 +1,14 @@
+[package]
+name = "ics-chrono-tz"
+version = "0.1.0"
+edition = "2021"
+publish = false
+build = "build.rs"
+
+[dependencies]
+ics = "0.5"
+chrono-tz = "=0.6.1"
+
+[build-dependencies]
+parse-zoneinfo = "0.3"
+chrono = "0.4"

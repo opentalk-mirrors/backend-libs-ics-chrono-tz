@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: OpenTalk GmbH <mail@opentalk.eu>
+#
+# SPDX-License-Identifier: EUPL-1.2
+
+---
+
+stages:
+  - lint
+
+lint:licensing:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_PIPELINE_SOURCE == 'schedule'
+  stage: lint
+  image:
+    name: fsfe/reuse:latest
+    entrypoint: ['']
+  script:
+    - reuse lint

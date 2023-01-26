@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: OpenTalk GmbH <mail@opentalk.eu>
+//
+// SPDX-License-Identifier: EUPL-1.2
+
 use chrono::{Datelike, NaiveDateTime};
 use core::panic;
 use parse_zoneinfo::line::{DaySpec, Line, LineParser, Weekday, Year};

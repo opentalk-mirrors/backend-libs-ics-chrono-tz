@@ -35,7 +35,7 @@ fn build_table() -> Table {
         .iter()
         .map(Path::new)
         .map(|path| {
-            File::open(&path).unwrap_or_else(|e| panic!("cannot open {}: {}", path.display(), e))
+            File::open(path).unwrap_or_else(|e| panic!("cannot open {}: {}", path.display(), e))
         })
         .map(BufReader::new)
         .flat_map(BufRead::lines)

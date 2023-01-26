@@ -94,11 +94,12 @@ fn main() -> Result<(), io::Error> {
         let zoneinfo = zoneset.next().unwrap();
 
         let dtstart = if let Some(previous) = zoneset.next() {
-            NaiveDateTime::from_timestamp(previous.end_time.unwrap().to_timestamp(), 0)
+            NaiveDateTime::from_timestamp_opt(previous.end_time.unwrap().to_timestamp(), 0)
         } else {
             // DTSTART fallback
-            NaiveDateTime::from_timestamp(0, 0)
-        };
+            NaiveDateTime::from_timestamp_opt(0, 0)
+        }
+        .unwrap();
 
         match &zoneinfo.saving {
             Saving::NoSaving => {
@@ -170,23 +171,25 @@ fn main() -> Result<(), io::Error> {
                         let utc_offset = zoneinfo.offset;
                         let dst_offset = zoneinfo.offset + dst_rule.time_to_add;
 
-                        let standard_dtstart = NaiveDateTime::from_timestamp(
+                        let standard_dtstart = NaiveDateTime::from_timestamp_opt(
                             standard_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,
                                 dst_offset,
                             ),
                             0,
-                        );
+                        )
+                        .unwrap();
 
-                        let dst_dtstart = NaiveDateTime::from_timestamp(
+                        let dst_dtstart = NaiveDateTime::from_timestamp_opt(
                             dst_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,
                                 dst_offset,
                             ),
                             0,
-                        );
+                        )
+                        .unwrap();
 
                         let standard_rrule = rule_to_rrule(standard_rule);
                         let dst_rrule = rule_to_rrule(dst_rule);

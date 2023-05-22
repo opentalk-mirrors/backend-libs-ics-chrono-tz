@@ -124,7 +124,6 @@ fn main() -> Result<(), io::Error> {
                 );
             }
             Saving::Multiple(rule_name) => {
-                // <Entering full jank mode>
                 // VTIMEZONE has two subcomponents STANDARD AND DAYLIGHT(DST)
                 //
                 // The tz-db has rules which define the standard and DST but doesn't mark it as such.

@@ -6,8 +6,12 @@
 name = "ics-chrono-tz"
 version = "0.1.0"
 edition = "2021"
-publish = false
+publish = true
 build = "build.rs"
+description = "Convert chrono-tz Tz to ics::TimeZone"
+license = "EUPL-1.2"
+documentation = "https://docs.rs/ics-chrono-tz"
+keywords = ["ics", "timezone", "chrono"]
 
 [dependencies]
 ics = "0.5"

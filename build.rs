@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-use chrono::{Datelike, NaiveDateTime};
+use chrono::{DateTime, Datelike};
 use parse_zoneinfo::line::{DaySpec, Line, LineParser, Weekday, Year};
 use parse_zoneinfo::table::{RuleInfo, Saving, Table, TableBuilder};
 use std::env::var;
@@ -97,10 +97,10 @@ fn main() -> Result<(), io::Error> {
         let zoneinfo = zoneset.next().unwrap();
 
         let dtstart = if let Some(previous) = zoneset.next() {
-            NaiveDateTime::from_timestamp_opt(previous.end_time.unwrap().to_timestamp(), 0)
+            DateTime::from_timestamp(previous.end_time.unwrap().to_timestamp(), 0)
         } else {
             // DTSTART fallback
-            NaiveDateTime::from_timestamp_opt(0, 0)
+            DateTime::from_timestamp(0, 0)
         }
         .unwrap();
 
@@ -173,7 +173,7 @@ fn main() -> Result<(), io::Error> {
                         let utc_offset = zoneinfo.offset;
                         let dst_offset = zoneinfo.offset + dst_rule.time_to_add;
 
-                        let standard_dtstart = NaiveDateTime::from_timestamp_opt(
+                        let standard_dtstart = DateTime::from_timestamp(
                             standard_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,
@@ -183,7 +183,7 @@ fn main() -> Result<(), io::Error> {
                         )
                         .unwrap();
 
-                        let dst_dtstart = NaiveDateTime::from_timestamp_opt(
+                        let dst_dtstart = DateTime::from_timestamp(
                             dst_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,

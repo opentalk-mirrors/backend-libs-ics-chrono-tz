@@ -2,8 +2,7 @@
 //
 // SPDX-License-Identifier: EUPL-1.2
 
-use chrono::{Datelike, NaiveDateTime};
-use core::panic;
+use chrono::{DateTime, Datelike};
 use parse_zoneinfo::line::{DaySpec, Line, LineParser, Weekday, Year};
 use parse_zoneinfo::table::{RuleInfo, Saving, Table, TableBuilder};
 use std::env::var;
@@ -98,10 +97,10 @@ fn main() -> Result<(), io::Error> {
         let zoneinfo = zoneset.next().unwrap();
 
         let dtstart = if let Some(previous) = zoneset.next() {
-            NaiveDateTime::from_timestamp_opt(previous.end_time.unwrap().to_timestamp(), 0)
+            DateTime::from_timestamp(previous.end_time.unwrap().to_timestamp(), 0)
         } else {
             // DTSTART fallback
-            NaiveDateTime::from_timestamp_opt(0, 0)
+            DateTime::from_timestamp(0, 0)
         }
         .unwrap();
 
@@ -125,13 +124,12 @@ fn main() -> Result<(), io::Error> {
                 );
             }
             Saving::Multiple(rule_name) => {
-                // <Entering full jank mode>
                 // VTIMEZONE has two subcomponents STANDARD AND DAYLIGHT(DST)
                 //
                 // The tz-db has rules which define the standard and DST but doesn't mark it as such.
                 // Figure which rules are active by only looking at rules with the TO field set to 'max'
                 //
-                // Panic if there's more than 2 active roles, because that doesn't seem to be the
+                // Panic if there's more than 2 active rules, because that doesn't seem to be the
                 // case right now anywhere and I'm not sure how one would handle that.
                 //
                 // If there's fewer than two we just fall back to the standard component.
@@ -175,7 +173,7 @@ fn main() -> Result<(), io::Error> {
                         let utc_offset = zoneinfo.offset;
                         let dst_offset = zoneinfo.offset + dst_rule.time_to_add;
 
-                        let standard_dtstart = NaiveDateTime::from_timestamp_opt(
+                        let standard_dtstart = DateTime::from_timestamp(
                             standard_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,
@@ -185,7 +183,7 @@ fn main() -> Result<(), io::Error> {
                         )
                         .unwrap();
 
-                        let dst_dtstart = NaiveDateTime::from_timestamp_opt(
+                        let dst_dtstart = DateTime::from_timestamp(
                             dst_rule.absolute_datetime(
                                 dtstart.year() as i64,
                                 utc_offset,
@@ -260,7 +258,7 @@ fn rule_to_rrule(rule: &RuleInfo) -> String {
 
             assert!(monthday >= 1);
             format!(
-                "FREQ=YEARLY;INTERVAL=1;BYMONTHDAY={bymonthday};BYDAY={};BYMONTH={};BYSETPOS=1",
+                "FREQ=YEARLY;INTERVAL=1;BYMONTHDAY={bymonthday};BYDAY={};BYMONTH={};BYSETPOS=-1",
                 rrule_weekday(weekday),
                 rule.month as u32
             )

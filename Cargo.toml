@@ -20,3 +20,6 @@ chrono-tz = "=0.8.6"
 [build-dependencies]
 parse-zoneinfo = "0.3"
 chrono = "0.4"
+
+[package.metadata.cargo-machete]
+ignored = ["chrono", "chrono_tz", "ics", "parse_zoneinfo"]

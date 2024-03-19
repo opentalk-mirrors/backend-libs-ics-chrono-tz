@@ -1,5 +1,5 @@
 # SPDX-FileCopyrightText: OpenTalk GmbH <mail@opentalk.eu>
-# SPDX-License-Identifier: EUPL-1.2
+# SPDX-License-Identifier: MIT OR Apache-2.0
 
 # This template contains all of the possible sections and their default values
 
@@ -93,7 +93,7 @@ confidence-threshold = 0.8
 # Allow 1 or more licenses on a per-crate basis, so that particular licenses
 # aren't accepted for every possible crate as with the normal allow list
 exceptions = [
-    { allow = ["EUPL-1.2"], name = "ics-chrono-tz" },
+    { allow = ["MIT", "Apache-2.0"], name = "ics-chrono-tz" },
 ]
 
 # Some crates don't have (easily) machine readable licensing information,

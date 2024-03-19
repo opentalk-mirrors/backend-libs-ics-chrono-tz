@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: OpenTalk GmbH <mail@opentalk.eu>
 //
-// SPDX-License-Identifier: EUPL-1.2
+// SPDX-License-Identifier: MIT OR Apache-2.0
 
 #![allow(non_camel_case_types, clippy::unreadable_literal)]
 

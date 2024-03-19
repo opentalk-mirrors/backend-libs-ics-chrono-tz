@@ -6,4 +6,4 @@ Upstream-Contact: OpenTalk GmbH <mail@opentalk.eu>
 Files:
  Cargo.lock
 Copyright: OpenTalk GmbH <mail@opentalk.eu>
-License: EUPL-1.2
+License: MIT OR Apache-2.0

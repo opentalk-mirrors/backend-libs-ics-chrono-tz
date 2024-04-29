@@ -51,7 +51,7 @@ lint:dependency_check:
     - if: $CI_PIPELINE_SOURCE == 'schedule'
   variables:
     GIT_SUBMODULE_STRATEGY: recursive
-  script: cargo-deny --workspace check
+  script: cargo deny --workspace check
 
 lint:unnecessary_dependencies:
   stage: lint

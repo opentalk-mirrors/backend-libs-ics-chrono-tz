@@ -2,13 +2,18 @@
 //
 // SPDX-License-Identifier: MIT OR Apache-2.0
 
+use std::{
+    env::var,
+    fs::{File, OpenOptions},
+    io::{self, BufRead, BufReader, Write},
+    path::Path,
+};
+
 use chrono::{DateTime, Datelike};
-use parse_zoneinfo::line::{DaySpec, Line, LineParser, Weekday, Year};
-use parse_zoneinfo::table::{RuleInfo, Saving, Table, TableBuilder};
-use std::env::var;
-use std::fs::{File, OpenOptions};
-use std::io::{self, BufRead, BufReader, Write};
-use std::path::Path;
+use parse_zoneinfo::{
+    line::{DaySpec, Line, LineParser, Weekday, Year},
+    table::{RuleInfo, Saving, Table, TableBuilder},
+};
 
 const FMT_ICS_LOCAL: &str = "%Y%m%dT%H%M%S";
 

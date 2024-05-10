@@ -50,7 +50,7 @@ fn build_table() -> Table {
         .map(Result::unwrap)
         .map(strip_comments);
 
-    let parser = LineParser::new();
+    let parser = LineParser::default();
     let mut table = TableBuilder::new();
 
     for line in lines {

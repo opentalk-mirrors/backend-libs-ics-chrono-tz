@@ -6,5 +6,6 @@ Upstream-Contact: OpenTalk GmbH <mail@opentalk.eu>
 Files:
  Cargo.lock
  renovate.json
+ CHANGELOG.md
 Copyright: OpenTalk GmbH <mail@opentalk.eu>
 License: MIT OR Apache-2.0

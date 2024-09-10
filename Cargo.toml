@@ -15,7 +15,7 @@ keywords = ["ics", "timezone", "chrono"]
 
 [dependencies]
 ics = "0.5"
-chrono-tz = "=0.9.0"
+chrono-tz = "=0.10.0"
 
 [build-dependencies]
 parse-zoneinfo = "0.3"

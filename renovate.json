@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "labels": [
-    "Maintenance"
+  "reviewers": [
+    "@opentalk/tools/renovate-reviewers/libs"
   ]
 }

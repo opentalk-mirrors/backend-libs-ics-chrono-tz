@@ -85,7 +85,7 @@ fn main() -> Result<(), io::Error> {
     pub trait ToIcsTimeZone {{
         fn to_latest_ics_timezone(&self) -> TimeZone;
     }}
-    
+
     impl ToIcsTimeZone for Tz {{
         fn to_latest_ics_timezone(&self) -> TimeZone {{
             match *self {{

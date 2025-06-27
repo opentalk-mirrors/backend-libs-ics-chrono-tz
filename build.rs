@@ -94,7 +94,7 @@ fn main() -> Result<(), io::Error> {
 
     for zone in table.zonesets.keys().chain(table.links.keys()) {
         let zone_ident = convert_bad_chars(zone);
-        writeln!(librs, "Tz::{} => {{", zone_ident)?;
+        writeln!(librs, "Tz::{zone_ident} => {{")?;
 
         // only generate def for last zoneset
         let mut zoneset = table.get_zoneset(zone).unwrap().iter().rev();
@@ -312,7 +312,7 @@ fn format_utc_offset(timestamp: i64) -> String {
     let hours = timestamp / 60 / 60;
     let minutes = ((timestamp.abs()) / 60) % 60;
 
-    format!("{:+03}{:02}", hours, minutes)
+    format!("{hours:+03}{minutes:02}")
 }
 
 // Copied from https://github.com/chronotope/chrono-tz/blob/main/chrono-tz-build/src/lib.rs

@@ -11,7 +11,7 @@ use std::{
 
 use chrono::{DateTime, Datelike};
 use parse_zoneinfo::{
-    line::{DaySpec, Line, LineParser, Weekday, Year},
+    line::{DaySpec, Line, Weekday, Year},
     table::{RuleInfo, Saving, Table, TableBuilder},
 };
 
@@ -50,11 +50,10 @@ fn build_table() -> Table {
         .map(Result::unwrap)
         .map(strip_comments);
 
-    let parser = LineParser::default();
     let mut table = TableBuilder::new();
 
     for line in lines {
-        match parser.parse_str(&line).unwrap() {
+        match Line::new(&line).unwrap() {
             Line::Zone(zone) => table.add_zone_line(zone).unwrap(),
             Line::Continuation(cont) => table.add_continuation_line(cont).unwrap(),
             Line::Rule(rule) => table.add_rule_line(rule).unwrap(),
@@ -102,7 +101,7 @@ fn main() -> Result<(), io::Error> {
         let zoneinfo = zoneset.next().unwrap();
 
         let dtstart = if let Some(previous) = zoneset.next() {
-            DateTime::from_timestamp(previous.end_time.unwrap().to_timestamp(), 0)
+            DateTime::from_timestamp(previous.end_time.unwrap().to_timestamp(0, 0), 0)
         } else {
             // DTSTART fallback
             DateTime::from_timestamp(0, 0)

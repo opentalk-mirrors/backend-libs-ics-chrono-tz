@@ -18,7 +18,7 @@ ics = "0.5"
 chrono-tz = "0.10.3"
 
 [build-dependencies]
-parse-zoneinfo = "0.4"
+parse-zoneinfo = "0.5"
 chrono = "0.4"
 
 [package.metadata.cargo-machete]

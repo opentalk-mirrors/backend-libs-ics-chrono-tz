@@ -82,11 +82,11 @@ fn main() -> Result<(), io::Error> {
     use ics::properties::RRule;
 
     pub trait ToIcsTimeZone {{
-        fn to_latest_ics_timezone(&self) -> TimeZone;
+        fn to_latest_ics_timezone(&self) -> TimeZone<'_>;
     }}
 
     impl ToIcsTimeZone for Tz {{
-        fn to_latest_ics_timezone(&self) -> TimeZone {{
+        fn to_latest_ics_timezone(&self) -> TimeZone<'_> {{
             match *self {{
     "#
     )?;

@@ -5,13 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-09-13
+
+[0.5.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/compare/v0.4.0...v0.5.0
+
+### 📦 Dependencies
+
+- (deps) Lock file maintenance ([!101](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/101), [!103](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/103), [!104](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/104), [!107](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/107), [!109](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/109), [!112](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/112), [!113](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/113), [!114](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/114), [!123](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/123), [!124](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/124), [!126](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/126), [!131](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/131), [!134](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/134), [!138](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/138), [!140](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/140), [!142](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/142), [!144](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/144), [!147](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/147), [!150](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/150), [!151](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/151), [!153](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/153), [!155](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/155), [!156](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/156), [!159](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/159), [!160](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/160), [!161](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/161), [!164](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/164), [!165](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/165), [!167](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/167), [!20](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/20), [!21](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/21), [!22](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/22), [!23](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/23), [!26](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/26), [!27](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/27), [!29](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/29), [!32](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/32), [!33](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/33), [!35](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/35), [!36](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/36), [!37](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/37), [!38](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/38), [!39](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/39), [!40](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/40), [!41](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/41), [!43](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/43), [!45](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/45), [!46](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/46), [!48](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/48), [!50](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/50), [!51](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/51), [!52](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/52), [!53](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/53), [!54](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/54), [!55](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/55), [!58](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/58), [!59](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/59), [!60](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/60), [!62](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/62), [!64](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/64), [!67](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/67), [!68](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/68), [!70](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/70), [!71](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/71), [!73](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/73), [!74](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/74), [!75](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/75), [!76](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/76), [!77](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/77), [!78](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/78), [!80](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/80), [!81](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/81), [!84](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/84), [!90](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/90), [!91](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/91), [!94](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/94), [!96](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/96), [!98](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/98))
+- (deps) Update git.opentalk.dev:5050/opentalk/backend/containers/rust docker tag ([!13](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/13), [!18](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/18), [!25](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/25), [!34](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/34), [!42](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/42), [!47](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/47), [!57](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/57), [!66](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/66), [!72](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/72), [!79](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/79), [!92](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/92), [!105](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/105), [!116](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/116), [!122](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/122), [!132](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/132), [!137](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/137), [!166](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/166))
+- (deps) Update pre-commit hook adrienverge/yamllint ([!86](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/86), [!128](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/128))
+- (deps) Update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.23.0 ([!108](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/108), [!129](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/129), [!139](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/139), [!154](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/154))
+- (deps) Update pre-commit hook andrejorsula/pre-commit-cargo to v0.5.0 ([!125](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/125))
+- (deps) Update pre-commit hook embarkstudios/cargo-deny ([!85](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/85), [!95](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/95), [!106](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/106), [!118](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/118), [!120](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/120), [!121](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/121), [!127](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/127), [!133](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/133), [!135](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/135), [!136](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/136), [!141](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/141), [!143](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/143), [!145](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/145), [!152](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/152), [!157](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/157))
+- (deps) Update pre-commit hook fsfe/reuse-tool ([!99](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/99), [!100](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/100), [!110](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/110), [!111](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/111), [!115](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/115))
+- (deps) Update pre-commit hook markdownlint/markdownlint ([!119](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/119), [!146](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/146), [!148](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/148), [!162](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/162), [!163](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/163))
+- (deps) Update pre-commit hook pre-commit/pre-commit-hooks ([!87](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/87), [!88](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/88), [!93](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/93))
+- (deps) Update rust crate chrono ([!44](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/44), [!56](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/56), [!69](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/69), [!102](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/102), [!130](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/130))
+- (deps) Update rust crate chrono-tz ([!24](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/24), [!49](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/49), [!61](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/61), [!14](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/14))
+- (deps) Update rust crate parse-zoneinfo ([!83](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/83), [!89](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/89), [!12](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/12))
+
+### ⚙ Miscellaneous
+
+- Update minor dependency versions ([!10](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/10))
+- Update deny.toml file to new configuration format ([!10](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/10))
+- Add & apply rustfmt.toml ([!11](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/11))
+- (ci) Add renovate.json ([!8](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/8))
+- Replace deprecated function call from `parse-zoneinfo` ([!12](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/12))
+- Sync with release 0.3.0 ([!17](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/17))
+- (ci) Fix cargo-machete package metadata to new naming mechanism ([!30](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/30))
+- Add pre-commit config ([!65](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/65))
+- (ci) Update default image to Debian Trixie ([!97](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/97), [#11](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/issues/11))
+
+### Ci
+
+- Run `cargo deny` instead of `cargo-deny` ([!10](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/10))
+- Call `cargo-deny` with `--deny unmatched-skip --deny license-not-encountered` ([!19](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/19), [#9](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/issues/9))
+- Introduce update-changelog script ([!31](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/31))
+- Configure renovate merge request reviewers ([!63](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/63))
+- (pre-commit) Switch from taplo to olpat (taplo is unmaintained) ([!158](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/158))
+
+## [0.4.0]
+
+[0.4.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/compare/v0.3.0...v0.4.0
+
+### 📦 Dependencies
+
+- (deps) Lock file maintenance ([!20](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/20), [!21](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/21), [!22](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/22), [!23](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/23))
+- (deps) Update git.opentalk.dev:5050/opentalk/backend/containers/rust docker tag to v1.79.0 ([!18](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/18))
+- (deps) Update git.opentalk.dev:5050/opentalk/backend/containers/rust docker tag to v1.81.0 ([!25](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/25))
+- (deps) Update rust crate chrono-tz to v0.10.0 ([!24](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/24))
+
+### Ci
+
+- Call `cargo-deny` with `--deny unmatched-skip --deny license-not-encountered` ([!19](https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/-/merge_requests/19))
+
 ## [0.3.0]
 
-### <!-- 1 -->:bug: Bug fixes
+[0.3.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/compare/v0.2.0...0.3.0
+
+### 🐛 Bug fixes
 
 - Update rust crate chrono-tz to v0.9.0
 
-### <!-- 3 -->:gear: Miscellaneous
+### ⚙ Miscellaneous
 
 - Update minor dependency versions
 - Update rust crate parse-zoneinfo to v0.3.1
@@ -20,15 +76,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0] - 2024-03-21
 
-### <!-- 3 -->:gear: Miscellaneous
+[0.2.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/compare/v0.1.0...v0.2.0
+
+### ⚙ Miscellaneous
 
 - Add several ci jobs
 
 ### License
 
 - Switch to MIT OR Apache-2.0 from EUPL-1.2 ([#3](https://git.opentalk.dev/opentalk/backend/services/controller/-/issues/3))
-
-[0.3.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/compare/v0.2.0...0.3.0
-[0.2.0]: https://git.opentalk.dev/opentalk/backend/libs/ics-chrono-tz/compare/v0.1.0...v0.2.0
-
-<!-- generated by git-cliff -->
